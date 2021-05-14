@@ -1,10 +1,15 @@
 import { Thumbnail } from ".."
 
 
-const Results = () => {
+const Results = ({ results }) => {
     return (
         <div>
-            <Thumbnail /> 
+            {results.map(result => (
+                <Thumbnail
+                    key={result.id}
+                    result={result}
+                />
+            ))}
         </div>
     );
 };
