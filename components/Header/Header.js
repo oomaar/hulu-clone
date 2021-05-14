@@ -1,24 +1,18 @@
-import {
-    HomeIcon,
-    LightningBoltIcon,
-    BadgeCheckIcon,
-    CollectionIcon,
-    SearchIcon,
-    UserIcon,
-} from "@heroicons/react/outline";
 import Image from "next/image";
 import { HeaderItem } from "..";
+import { headerData } from "../../data/headerData";
 
 const Header = () => {
     return (
         <header className="header">
             <div className="header__icons">
-                <HeaderItem title="HOME" Icon={HomeIcon} />
-                <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
-                <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
-                <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
-                <HeaderItem title="SEARCH" Icon={SearchIcon} />
-                <HeaderItem title="ACCOUNT" Icon={UserIcon} />
+                {headerData.map(icon => (
+                    <HeaderItem
+                        key={icon.id}
+                        title={icon.title}
+                        Icon={icon.icon}
+                    />
+                ))}
             </div>
             <Image
                 className="object-contain"
