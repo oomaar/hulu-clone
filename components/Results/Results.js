@@ -1,7 +1,10 @@
+import { Thumbnail } from ".."
+
+
 const Results = () => {
     return (
         <div>
-            Results
+            <Thumbnail /> 
         </div>
     );
 };
