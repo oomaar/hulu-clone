@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import { GlobalHeadTag, Header, Navbar } from '../components'
+import { GlobalHeadTag, Header, Navbar, Results } from '../components'
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <GlobalHeadTag title="hulu 2.0" />
       <Header />
       <Navbar />
+      <Results />
     </div>
   )
 }
