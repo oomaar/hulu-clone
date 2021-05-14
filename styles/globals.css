@@ -7,3 +7,14 @@
         @apply bg-[#06202a] text-gray-300;
     }
 }
+
+@layer components {
+    /* Header */
+    .header {
+        @apply flex flex-col sm:flex-row m-5 justify-between items-center h-auto;
+    }
+
+    .header__icons {
+        @apply flex flex-grow justify-evenly max-w-2xl;
+    }
+}
